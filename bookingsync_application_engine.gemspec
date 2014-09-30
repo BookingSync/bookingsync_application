@@ -7,11 +7,11 @@ require "bookingsync_application_engine/version"
 Gem::Specification.new do |s|
   s.name        = "bookingsync_application_engine"
   s.version     = BookingsyncApplicationEngine::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of BookingsyncApplicationEngine."
-  s.description = "TODO: Description of BookingsyncApplicationEngine."
+  s.authors     = ["Marcin Nowicki"]
+  s.email       = ["dev@bookingsync.com"]
+  s.homepage    = "https://github.com/BookingSync/bookingsync-application-engine"
+  s.summary     = "A Rails engine to simplify building BookingSync Applications"
+  s.description = "A Rails engine to simplify building BookingSync Applications"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
