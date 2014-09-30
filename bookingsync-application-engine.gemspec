@@ -5,7 +5,7 @@ require "bookingsync_application_engine/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "bookingsync_application_engine"
+  s.name        = "bookingsync-application-engine"
   s.version     = BookingsyncApplicationEngine::VERSION
   s.authors     = ["Marcin Nowicki"]
   s.email       = ["dev@bookingsync.com"]
