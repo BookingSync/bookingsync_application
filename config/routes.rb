@@ -1,2 +1,2 @@
-BookingsyncApplicationEngine::Engine.routes.draw do
+BookingsyncApplication::Engine.routes.draw do
 end
