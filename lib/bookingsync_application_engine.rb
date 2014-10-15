@@ -1,4 +1,0 @@
-require "bookingsync_application_engine/engine"
-
-module BookingsyncApplicationEngine
-end
