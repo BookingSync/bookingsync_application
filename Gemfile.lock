@@ -9,8 +9,12 @@ PATH
   specs:
     bookingsync-application-engine (0.0.1)
       bookingsync-engine (~> 0.1.0)
+      factory_girl_rails
+      guard-livereload
+      guard-rspec
       jsonapi-resources (~> 0.0.5)
       rails (~> 4.1.6)
+      rspec-rails
 
 GEM
   remote: https://rubygems.org/
@@ -191,10 +195,6 @@ PLATFORMS
 
 DEPENDENCIES
   bookingsync-application-engine!
-  factory_girl_rails
-  guard-livereload
-  guard-rspec
   jsonapi-resources!
   pg
-  rspec-rails
   sqlite3
