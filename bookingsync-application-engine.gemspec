@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.1.6"
   s.add_dependency "jsonapi-resources", "~> 0.0.5"
-  s.add_dependency "bookingsync-engine", "~> 0.1.0"
+  s.add_dependency "bookingsync-engine"
   s.add_dependency "guard-livereload"
   s.add_dependency "guard-rspec"
   s.add_dependency "rspec-rails"
