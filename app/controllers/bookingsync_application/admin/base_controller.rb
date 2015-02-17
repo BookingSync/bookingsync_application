@@ -1,6 +1,6 @@
 require 'jsonapi/resource_controller'
 
-class BookingsyncApplication::Engine::Admin::BaseController < JSONAPI::ResourceController
+class BookingsyncApplication::Admin::BaseController < JSONAPI::ResourceController
   force_ssl
   respond_to :json
 

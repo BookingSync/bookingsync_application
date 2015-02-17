@@ -1,4 +1,3 @@
 Rails.application.routes.draw do
-  get "/authenticated", to: "authenticated#index"
-  root to: "home#index"
+  mount BookingSync::Engine => '/'
 end

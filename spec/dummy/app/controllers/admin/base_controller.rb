@@ -1,2 +1,2 @@
-class Admin::BaseController < BookingsyncApplication::Engine::Admin::BaseController
+class Admin::BaseController < BookingsyncApplication::Admin::BaseController
 end
