@@ -210,7 +210,7 @@ PLATFORMS
 
 DEPENDENCIES
   bookingsync-application-engine!
-  bookingsync-engine
+  bookingsync-engine (>= 0.4.5)
   jsonapi-resources!
   pg
   sqlite3
