@@ -8,6 +8,7 @@ PATH
   remote: .
   specs:
     bookingsync-application-engine (0.0.1)
+      bookingsync-engine (~> 0.4.6)
       factory_girl_rails
       guard-livereload
       guard-rspec
@@ -51,7 +52,7 @@ GEM
       addressable
       faraday (~> 0.9)
       hashie
-    bookingsync-engine (0.4.5)
+    bookingsync-engine (0.4.6)
       bookingsync-api (>= 0.0.23)
       omniauth-bookingsync (~> 0.2.0)
       rails (>= 4.0.0)
@@ -217,7 +218,6 @@ PLATFORMS
 
 DEPENDENCIES
   bookingsync-application-engine!
-  bookingsync-engine (>= 0.4.5)
   jsonapi-resources!
   pg
   sqlite3

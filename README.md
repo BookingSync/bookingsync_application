@@ -4,9 +4,8 @@ A Rails engine to simplify building BookingSync Applications.
 
 # Usage
 
-* add lines to Gemfile (they need to be side-required):
+* add bookingsync-application-engine to your gemfile
 ```
-gem 'bookingsync-engine'
 gem 'bookingsync-application-engine'
 ```
 * add to rails_helper (before spec/support inclusion):
@@ -26,4 +25,4 @@ class Admin::BaseHTMLController < ApplicationController
   include BookingsyncApplication::CommonBaseController
 end
 ```
-* Follow steps in https://github.com/BookingSync/bookingsync-engine
+* BookingsyncEngine is a dependency here. Follow steps in https://github.com/BookingSync/bookingsync-engine
