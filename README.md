@@ -26,3 +26,4 @@ class Admin::BaseHTMLController < ApplicationController
   include BookingsyncApplication::CommonBaseController
 end
 ```
+* Follow steps in https://github.com/BookingSync/bookingsync-engine
