@@ -1,15 +1,12 @@
 require 'jsonapi/resource_controller'
+require 'bookingsync_application/common_base_controller'
 
 class BookingsyncApplication::Admin::BaseController < JSONAPI::ResourceController
-  force_ssl
   respond_to :json
 
-  before_action :set_json_format, :authenticate_account!
-  after_action :allow_bookingsync_iframe
+  before_action :set_json_format
 
-  def context
-    { current_account: current_account }
-  end
+  include BookingsyncApplication::CommonBaseController
 
   private
 
