@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/BookingSync/bookingsync_application.svg?branch=master)](https://travis-ci.org/BookingSync/bookingsync-engine)
+
 # BookingsyncApplication
 
 A Rails engine to simplify building BookingSync Applications.
