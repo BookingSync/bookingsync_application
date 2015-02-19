@@ -1,8 +1,6 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem 'jsonapi-resources', github: 'cerebris/jsonapi-resources'
-
-# Declare your gem's dependencies in bookingsync_application_engine.gemspec.
+# Declare your gem's dependencies in bookingsync_application.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
 gemspec
@@ -12,5 +10,7 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-# To use debugger
-# gem 'debugger'
+gem 'jsonapi-resources', '0.0.6'
+
+# To use a debugger
+# gem 'byebug', group: [:development, :test]

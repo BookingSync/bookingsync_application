@@ -1,3 +1,5 @@
+require "bookingsync"
+require "jsonapi-resources"
 require "bookingsync_application/engine"
 
 module BookingsyncApplication
@@ -7,7 +9,7 @@ module BookingsyncApplication
     if @@master_controller_class
       @@master_controller_class.constantize
     else
-      ActionController::Base
+      ApplicationController
     end
   end
 end

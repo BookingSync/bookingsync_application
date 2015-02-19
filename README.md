@@ -1,12 +1,12 @@
-# bookingsync-application-engine
+# BookingsyncApplication
 
 A Rails engine to simplify building BookingSync Applications.
 
 # Usage
 
-* add bookingsync-application-engine to your gemfile
+* add bookingsync_application to your gemfile
 ```
-gem 'bookingsync-application-engine'
+gem 'bookingsync_application'
 ```
 * add to rails_helper (before spec/support inclusion):
 ```
