@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bookingsync_application (0.0.1)
+    bookingsync_application (0.1.0)
       bookingsync-engine (~> 0.4.6)
       factory_girl_rails
       jsonapi-resources
