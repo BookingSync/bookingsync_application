@@ -3,6 +3,7 @@ require "synced"
 require "dotenv"
 require "jsonapi-resources"
 require "bookingsync_application/engine"
+require 'bookingsync_application/common_base_controller'
 
 module BookingsyncApplication
   mattr_accessor :master_controller_class

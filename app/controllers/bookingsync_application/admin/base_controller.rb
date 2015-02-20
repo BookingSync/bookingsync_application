@@ -1,5 +1,4 @@
 require 'jsonapi/resource_controller'
-require 'bookingsync_application/common_base_controller'
 
 class BookingsyncApplication::Admin::BaseController < JSONAPI::ResourceController
   respond_to :json
