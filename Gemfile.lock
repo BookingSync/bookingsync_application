@@ -3,6 +3,7 @@ PATH
   specs:
     bookingsync_application (0.1.0)
       bookingsync-engine (~> 0.4.6)
+      dotenv-rails
       factory_girl_rails
       jsonapi-resources
       rails (~> 4.1.0)
@@ -52,6 +53,9 @@ GEM
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubis (2.7.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)

@@ -1,4 +1,6 @@
 require "bookingsync"
+require "synced"
+require "dotenv"
 require "jsonapi-resources"
 require "bookingsync_application/engine"
 
