@@ -1,5 +1,7 @@
 # master
 
+* require dotenv-rails and not dotenv
+
 # 0.1.2 (2015-02-20)
 
 * update readme to pull dotenv from master to fix bug in loading .env

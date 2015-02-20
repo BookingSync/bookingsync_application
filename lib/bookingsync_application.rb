@@ -1,6 +1,6 @@
 require "bookingsync"
 require "synced"
-require "dotenv"
+require "dotenv-rails"
 require "jsonapi-resources"
 require "bookingsync_application/engine"
 require 'bookingsync_application/common_base_controller'
