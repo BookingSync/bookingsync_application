@@ -10,7 +10,6 @@ A Rails engine to simplify building BookingSync Applications.
 * add bookingsync_application to your gemfile
 ```
 gem 'bookingsync_application'
-gem 'dotenv', github: "bkeepers/dotenv" # Work around https://github.com/bkeepers/dotenv/issues/144
 ```
 * add to rails_helper (before spec/support inclusion):
 ```
