@@ -1,5 +1,6 @@
 # master
 
+* update readme to pull dotenv from master to fix bug in loading .env
 * require bookingsync_application/common_base_controller to be available in the app
 
 # 0.1.1 (2015-02-20)
