@@ -9,6 +9,9 @@ describe Admin::BaseController do
 
   let(:account) { create :account }
 
+  before do
+    controller.stub(:setup_request)
+  end
   before { @request.env['HTTPS'] = 'on' }
 
   it "redirects to engine authentication path" do

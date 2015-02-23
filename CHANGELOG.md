@@ -1,5 +1,7 @@
 # master
 
+* bumped jsonapi resources to 0.0.16
+
 # 0.1.3 (2015-02-20)
 
 * require dotenv-rails and not dotenv
