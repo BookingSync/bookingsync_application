@@ -9,9 +9,7 @@ class BookingsyncApplication::Admin::BaseController < JSONAPI::ResourceControlle
 
   private
 
-    def set_json_format
-      if params[:format].blank?
-        request.format = :json
-      end
-    end
+  def set_json_format
+    request.format = :json if params[:format].blank?
+  end
 end
