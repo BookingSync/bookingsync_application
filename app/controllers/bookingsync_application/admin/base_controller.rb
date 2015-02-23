@@ -5,7 +5,7 @@ class BookingsyncApplication::Admin::BaseController < JSONAPI::ResourceControlle
 
   before_action :set_json_format
 
-  include BookingsyncApplication::CommonBaseController
+  include BookingsyncApplication::Admin::CommonBaseController
 
   private
 

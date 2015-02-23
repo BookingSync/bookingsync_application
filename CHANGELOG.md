@@ -1,5 +1,8 @@
 # master
 
+* added admin namespace to common_base_controller
+* removed unused stuff
+
 # 0.1.4 (2015-02-23)
 
 * bumped jsonapi resources to 0.0.16
