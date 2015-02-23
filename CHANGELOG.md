@@ -1,5 +1,7 @@
 # master
 
+# 0.1.4 (2015-02-23)
+
 * bumped jsonapi resources to 0.0.16
 * added rubocop and initial cleanup
 
