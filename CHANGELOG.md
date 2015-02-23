@@ -1,7 +1,9 @@
 # master
 
+# 0.1.5 (2015-02-23)
+
 * added admin namespace to common_base_controller
-* removed unused stuff
+* removed unused stuff, that was causing some dependencies problems in sidekiq
 
 # 0.1.4 (2015-02-23)
 
