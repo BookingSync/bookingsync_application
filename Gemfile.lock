@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bookingsync_application (0.1.5)
+    bookingsync_application (0.1.6)
       bookingsync-engine (~> 0.5.0)
       dotenv-rails
       factory_girl_rails

@@ -1,4 +1,4 @@
-# master
+# 0.1.6 (2015-04-15)
 
 * bump bookingsync-engine, fixes token refresh issues
 
