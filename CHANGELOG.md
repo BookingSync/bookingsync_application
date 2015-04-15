@@ -1,5 +1,7 @@
 # master
 
+* bump bookingsync-engine, fixes token refresh issues
+
 # 0.1.5 (2015-02-23)
 
 * added admin namespace to common_base_controller
