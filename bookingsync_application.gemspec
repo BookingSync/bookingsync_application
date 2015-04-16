@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
-  s.add_dependency 'rails', '~> 4.1.0'
+  s.add_dependency 'rails', '~> 4.1'
   s.add_dependency 'bookingsync-engine', '~> 0.5.0'
   s.add_dependency 'jsonapi-resources', '~> 0.0.16'
   s.add_dependency 'rspec-rails'
