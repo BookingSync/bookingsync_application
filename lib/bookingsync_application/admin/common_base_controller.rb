@@ -9,10 +9,6 @@ module BookingsyncApplication
           after_action :allow_bookingsync_iframe
         end
       end
-
-      def context
-        { current_account: current_account }
-      end
     end
   end
 end
