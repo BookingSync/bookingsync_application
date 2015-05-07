@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'synced'
   s.add_dependency 'dotenv-rails'
 
+  s.add_development_dependency 'appraisal'
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'vcr'
   s.add_development_dependency 'webmock'
