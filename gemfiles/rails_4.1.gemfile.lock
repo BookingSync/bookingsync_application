@@ -4,10 +4,8 @@ PATH
     bookingsync_application (0.1.7)
       bookingsync-engine (~> 0.5.0)
       dotenv-rails
-      factory_girl_rails
       jsonapi-resources (~> 0.0.16)
       rails (~> 4.1)
-      rspec-rails
       synced
 
 GEM
@@ -76,7 +74,7 @@ GEM
     i18n (0.7.0)
     json (1.8.2)
     jsonapi-resources (0.0.16)
-    jwt (1.4.1)
+    jwt (1.5.0)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.5)
@@ -173,7 +171,9 @@ PLATFORMS
 DEPENDENCIES
   appraisal
   bookingsync_application!
+  factory_girl_rails
   rails (~> 4.1.0)
+  rspec-rails
   rubocop
   sqlite3
   vcr
