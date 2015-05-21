@@ -1,3 +1,9 @@
+# 0.2.0
+
+* Remove testing gems
+* Update readme
+* Update dependencies (jsonapi-resources and synced)
+
 # 0.1.7
 
 * relax rails dependency to ~> 4.0
