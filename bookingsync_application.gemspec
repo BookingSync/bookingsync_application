@@ -18,8 +18,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '~> 4.1'
   s.add_dependency 'bookingsync-engine', '~> 0.5.0'
-  s.add_dependency 'jsonapi-resources', '~> 0.0.16'
-  s.add_dependency 'synced'
+  s.add_dependency 'jsonapi-resources', '~> 0.1.1'
+  s.add_dependency 'synced', '~> 1.0.0'
   s.add_dependency 'dotenv-rails'
 
   s.add_development_dependency 'appraisal'
