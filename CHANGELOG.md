@@ -1,3 +1,7 @@
+# 0.2.2
+
+* bump synced to ~> 1.1.1
+
 # 0.2.1
 
 * bump synced dependency to ~> 1.1.0
