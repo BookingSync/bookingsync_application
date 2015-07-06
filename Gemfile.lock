@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bookingsync_application (0.2.2)
+    bookingsync_application (0.2.3)
       bookingsync-engine (~> 0.5.0)
       dotenv-rails
       jsonapi-resources (~> 0.1)

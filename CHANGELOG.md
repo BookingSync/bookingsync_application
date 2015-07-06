@@ -1,3 +1,7 @@
+# 0.2.3
+
+* Relax `jsonapi-resources` version requirement
+
 # 0.2.2
 
 * bump synced to ~> 1.1.1
