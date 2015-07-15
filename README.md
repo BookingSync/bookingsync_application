@@ -87,7 +87,7 @@ end
 class Admin::BaseHTMLController < ApplicationController
   respond_to :html
 
-  include BookingsyncApplication::CommonBaseController
+  include BookingsyncApplication::Admin::CommonBaseController
 end
 ```
 
