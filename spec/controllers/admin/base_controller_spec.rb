@@ -10,7 +10,7 @@ describe Admin::BaseController do
   let(:account) { create :account }
 
   before do
-    controller.stub(:setup_request)
+    allow(controller).to receive(:setup_request)
   end
   before { @request.env['HTTPS'] = 'on' }
 
