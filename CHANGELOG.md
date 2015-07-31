@@ -1,4 +1,4 @@
-# master
+# 0.3.1
 
 * Update `bookingsync-engine` to ~> 1.0.1
 
