@@ -13,17 +13,17 @@
 
 ActiveRecord::Schema.define(version: 20140522110454) do
 
-  create_table "accounts", force: true do |t|
+  create_table "accounts", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "provider"
-    t.integer  "uid"
+    t.integer  "synced_id"
     t.string   "name"
     t.string   "oauth_access_token"
     t.string   "oauth_refresh_token"
     t.string   "oauth_expires_at"
   end
 
-  add_index "accounts", ["uid"], name: "index_accounts_on_uid"
+  add_index "accounts", ["synced_id"], name: "index_accounts_on_synced_id"
 
 end

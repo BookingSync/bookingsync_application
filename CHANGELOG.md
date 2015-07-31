@@ -1,3 +1,8 @@
+# master
+
+* BREAKING CHANGE: Rename account `synced_key` from `uid` to `synced_id`
+* bump `bookingsync-engine` to ~> 1.0.0
+
 # 0.2.3
 
 * Relax `jsonapi-resources` version requirement

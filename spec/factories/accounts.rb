@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :account do
-    sequence(:uid)
+    sequence(:synced_id)
   end
 end
