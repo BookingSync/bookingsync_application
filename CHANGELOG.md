@@ -1,3 +1,7 @@
+# master
+
+* Update `bookingsync-engine` to ~> 1.0.1
+
 # 0.3.0
 
 * BREAKING CHANGE: Rename account `synced_key` from `uid` to `synced_id`
