@@ -29,7 +29,7 @@ bundle install
 
 ### Add authorization routes
 
-Then BookingSync Authorization routes need to be mounted inside you apps routes.rb:
+Then mount BookingSync Authorization routes inside `routes.rb`:
 ```ruby
 mount BookingSync::Engine => '/'
 ```
@@ -51,7 +51,7 @@ rails g model Account
 Then, generate a migration to add OAuth fields for the `Account` class:
 
 ```console
-rails g migration AddOAuthFieldsToAccounts provider:string uid:integer:index \
+rails g migration AddOAuthFieldsToAccounts provider:string synced_id:integer:index \
   name:string oauth_access_token:string oauth_refresh_token:string \
   oauth_expires_at:string
 ```
