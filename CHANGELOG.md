@@ -1,3 +1,8 @@
+# master
+
+* Relax synced gem dependency
+* Drop ruby 2.0 support, nearing end of life
+
 # 0.3.1
 
 * Update `bookingsync-engine` to ~> 1.0.1
