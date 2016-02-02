@@ -1,5 +1,7 @@
 # master
 
+# 0.4.0
+
 * Relax synced gem dependency
 * Drop ruby 2.0 support, nearing end of life
 
