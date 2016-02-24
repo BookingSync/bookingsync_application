@@ -1,5 +1,7 @@
 # master
 
+# 0.4.1
+
 * Add base controller for handling BookingSync's webhooks
 
 # 0.4.0

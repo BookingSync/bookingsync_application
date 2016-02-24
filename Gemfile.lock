@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bookingsync_application (0.4.0)
+    bookingsync_application (0.4.1)
       bookingsync-engine (~> 1.0.1)
       dotenv-rails
       jsonapi-resources (~> 0.1)
@@ -88,12 +88,12 @@ GEM
     json (1.8.3)
     jsonapi-resources (0.7.0)
       rails (>= 4.0)
-    jwt (1.5.2)
+    jwt (1.5.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    mime-types (2.99)
+    mime-types (2.99.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
@@ -177,7 +177,7 @@ GEM
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.0.1)
+    sprockets-rails (3.0.2)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
