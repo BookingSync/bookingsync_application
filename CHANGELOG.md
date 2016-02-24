@@ -1,5 +1,7 @@
 # master
 
+* Add base controller for handling BookingSync's webhooks
+
 # 0.4.0
 
 * Relax synced gem dependency
