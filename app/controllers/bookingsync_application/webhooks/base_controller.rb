@@ -1,4 +1,4 @@
-class Webhooks::BaseController < ApplicationController
+class BookingsyncApplication::Webhooks::BaseController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :verify_signature
 
@@ -11,21 +11,30 @@ class Webhooks::BaseController < ApplicationController
 
   def verify_signature
     Rails.logger.debug "bookingsync_hook_raw_post: #{request.raw_post}"
-    unless signature == request.headers["X-Content-Signature"]
+    unless [old_signature, new_signature].include? request.headers["X-Content-Signature"]
       invalidate_request_and_log "Bad BookingSync signature"
     end
   end
 
-  def signature
+  def old_signature
     OpenSSL::HMAC.hexdigest(digest, ENV["BOOKINGSYNC_APP_SECRET"],
       base64_encoded_payload)
   end
 
+  def new_signature
+    OpenSSL::HMAC.hexdigest(digest, ENV["BOOKINGSYNC_APP_SECRET"],
+      base64_strict_encoded_payload)
+  end
+
   def digest
-    OpenSSL::Digest::Digest.new("sha1")
+    OpenSSL::Digest.new("sha1")
   end
 
   def base64_encoded_payload
     Base64.encode64(request.raw_post)
+  end
+
+  def base64_strict_encoded_payload
+    Base64.strict_encode64(request.raw_post)
   end
 end
