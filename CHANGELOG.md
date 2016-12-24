@@ -1,5 +1,9 @@
 # master
 
+# 0.5.0
+
+* Add support for Rails 5
+
 # 0.4.1
 
 * Add base controller for handling BookingSync's webhooks
