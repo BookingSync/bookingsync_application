@@ -1,5 +1,8 @@
 # master
 
+* bump bookingsync-engine to ~> 2.0.1
+* drop rails 4.1 support
+
 # 0.5.0
 
 * Add support for Rails 5
