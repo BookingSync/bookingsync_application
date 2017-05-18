@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Api::BaseController do
   controller(Api::BaseController) do
     def index
-      render text: 'index body'
+      render plain: "plain text"
     end
   end
 

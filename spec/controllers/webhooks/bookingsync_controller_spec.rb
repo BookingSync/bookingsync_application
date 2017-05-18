@@ -10,7 +10,7 @@ describe Webhooks::BookingsyncController do
     before { @request.headers["X-Content-Signature"] = "9141f44bfaa6a41812e4e9655ffd02d3c927ac5e" }
 
     it "responses with status 200" do
-      post :everything, "foo"
+      post :everything, body: "foo"
       expect(response).to be_ok
     end
   end
@@ -19,7 +19,7 @@ describe Webhooks::BookingsyncController do
     before { @request.headers["X-Content-Signature"] = "2ef33a9deaefe9a6ad0226c8c9db272ca126f10b" }
 
     it "responses with status 200" do
-      post :everything, "foo"
+      post :everything, body: "foo"
       expect(response).to be_ok
     end
   end
@@ -28,7 +28,7 @@ describe Webhooks::BookingsyncController do
     before { @request.headers["X-Content-Signature"] = "e42951a4561cf14ffc97def80429542daba31ea6" }
 
     it "responses with unprocessable_entity status" do
-      post :everything, "foo"
+      post :everything, body: "foo"
       expect(response.status).to eq 422
     end
   end
