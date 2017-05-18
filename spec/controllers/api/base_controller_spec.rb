@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe Admin::BaseController do
-  controller(Admin::BaseController) do
+describe Api::BaseController do
+  controller(Api::BaseController) do
     def index
       render text: 'index body'
     end
@@ -21,7 +21,7 @@ describe Admin::BaseController do
 
     it 'forces ssl' do
       get :index
-      expect(response).to redirect_to 'https://test.host/admin/base'
+      expect(response).to redirect_to 'https://test.host/api/base'
     end
   end
 

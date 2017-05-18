@@ -76,9 +76,9 @@ We now want to provide secured controllers, this controllers will be accessible 
 
 You have 2 options pre built for this:
 
-1) Create base admin controller (it will be `json` based):
+1) Create base API controller (it will be `json` based):
 ```
-class Admin::BaseController < BookingsyncApplication::Admin::BaseController
+class Api::BaseController < BookingsyncApplication::Api::BaseController
 end
 ```
 
@@ -87,7 +87,7 @@ end
 class Admin::BaseHTMLController < ApplicationController
   respond_to :html
 
-  include BookingsyncApplication::Admin::CommonBaseController
+  include BookingsyncApplication::Controllers::CommonBase
 end
 ```
 

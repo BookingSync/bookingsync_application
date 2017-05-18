@@ -1,6 +1,6 @@
 module BookingsyncApplication
-  module Admin
-    module CommonBaseController
+  module Controllers
+    module CommonBase
       def self.included(base)
         base.class_eval do
           force_ssl
