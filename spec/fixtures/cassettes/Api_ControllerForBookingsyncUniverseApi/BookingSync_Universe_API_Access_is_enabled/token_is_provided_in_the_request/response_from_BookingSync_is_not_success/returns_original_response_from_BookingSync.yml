@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://bookingsync.com/api/v3/oauth
+    uri: https://www.bookingsync.com/api/v3/oauth
     body:
       encoding: US-ASCII
       string: ''

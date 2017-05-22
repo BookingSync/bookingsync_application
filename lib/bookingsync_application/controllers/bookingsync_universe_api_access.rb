@@ -37,7 +37,7 @@ module BookingsyncApplication
         @scope
       end
 
-      def booingsync_universe_authorize_request!(*required_scopes)
+      def bookingsync_universe_authorize_request!(*required_scopes)
         if !scope.allows_access_for?(Array(required_scopes).map(&:to_s))
           render json: { errors: [ { code: :forbidden } ] }, status: 403 and return
         end

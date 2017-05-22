@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://bookingsync.com/api/v3/oauth
+    uri: https://www.bookingsync.com/api/v3/oauth
     body:
       encoding: US-ASCII
       string: ''
@@ -35,7 +35,7 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '999'
       Link:
-      - <https://bookingsync.com/api/v3/oauth?page=1>; rel="first"
+      - <https://www.bookingsync.com/api/v3/oauth?page=1>; rel="first"
       X-Per-Page:
       - '100'
       Content-Type:
@@ -61,7 +61,7 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"oauth":{"account_id":1,"scopes":["public","payments_read","clients_read","bookings_read","rentals_read","rates_read"]},"meta":{"Link":{"first":"https://bookingsync.com/api/v3/oauth?page=1"},"X-Total-Pages":null,"X-Total-Count":null,"X-Per-Page":"100"}}'
+      string: '{"oauth":{"account_id":1,"scopes":["public","payments_read","clients_read","bookings_read","rentals_read","rates_read"]},"meta":{"Link":{"first":"https://www.bookingsync.com/api/v3/oauth?page=1"},"X-Total-Pages":null,"X-Total-Count":null,"X-Per-Page":"100"}}'
     http_version:
   recorded_at: Fri, 19 May 2017 15:40:00 GMT
 recorded_with: VCR 3.0.3

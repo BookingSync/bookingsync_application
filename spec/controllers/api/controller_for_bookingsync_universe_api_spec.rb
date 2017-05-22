@@ -17,13 +17,14 @@ class Api::ControllerForBookingsyncUniverseApi < BookingsyncApplication::Api::Ba
   include FakeAuthOverridableModuleForControllerForBookingsyncUniverseApi
   include BookingsyncApplication::Controllers::BookingsyncUniverseApiAccess
 
-  before_action -> { booingsync_universe_authorize_request! :clients_read, :clients_write }, only: :index
+  before_action -> { bookingsync_universe_authorize_request! :clients_read, :clients_write },
+    only: :index_with_authorization
 
-  def index
+  def index_with_authorization
     head 200
   end
 
-  def other_index
+  def index_without_authorization
     head 200
   end
 
@@ -38,8 +39,8 @@ RSpec.describe Api::ControllerForBookingsyncUniverseApi, type: :controller do
   before do
     Rails.application.routes.draw do
       namespace :api do
-        get "/index" => "controller_for_bookingsync_universe_api#index"
-        get "/other_index" => "controller_for_bookingsync_universe_api#other_index"
+        get "/index_with_authorization" => "controller_for_bookingsync_universe_api#index_with_authorization"
+        get "/index_without_authorization" => "controller_for_bookingsync_universe_api#index_without_authorization"
       end
     end
 
@@ -50,7 +51,7 @@ RSpec.describe Api::ControllerForBookingsyncUniverseApi, type: :controller do
     Rails.application.reload_routes!
   end
 
-  # Use some meainingful token to rerecord cassettes
+  # use some meaningful token to rerecord cassettes
   let(:random_token) { SecureRandom.hex(32) }
 
   context "BookingSync Universe API Access is enabled" do
@@ -63,7 +64,7 @@ RSpec.describe Api::ControllerForBookingsyncUniverseApi, type: :controller do
         context "endpoint is guarded by authorization" do
           context "at least one scope is permitted" do
             it "is success", :vcr do
-              get :index
+              get :index_with_authorization
 
               expect(response).to have_http_status(200)
             end
@@ -71,7 +72,7 @@ RSpec.describe Api::ControllerForBookingsyncUniverseApi, type: :controller do
 
           context "no scope is permitted" do
             it "returns 403 status", :vcr do
-              get :index
+              get :index_with_authorization
 
               expect(response).to have_http_status(403)
               expect(JSON.parse(response.body)).to eq ({
@@ -85,7 +86,7 @@ RSpec.describe Api::ControllerForBookingsyncUniverseApi, type: :controller do
 
         context "endpoint is not guarded by authorization" do
           it "is success", :vcr do
-            get :other_index
+            get :index_without_authorization
 
             expect(response).to have_http_status(200)
           end
@@ -98,7 +99,7 @@ RSpec.describe Api::ControllerForBookingsyncUniverseApi, type: :controller do
         end
 
         it "returns original response from BookingSync", :vcr do
-          get :other_index
+          get :index_without_authorization
 
           expect(response).to have_http_status(401)
           expect(JSON.parse(response.body)).to eq ({
@@ -111,14 +112,10 @@ RSpec.describe Api::ControllerForBookingsyncUniverseApi, type: :controller do
     end
 
     context "token is not provided in the request" do
-      before do
-        allow(controller).to receive(:enable_for_bookingsync_universe_api?).and_return(false)
-      end
-
       it "fallbacks to standard authentication" do
         expect(SentinelForTestingAuthFallback).to receive(:call)
 
-        get :other_index
+        get :index_without_authorization
       end
     end
   end
@@ -131,7 +128,7 @@ RSpec.describe Api::ControllerForBookingsyncUniverseApi, type: :controller do
     it "fallbacks to standard authentication" do
       expect(SentinelForTestingAuthFallback).to receive(:call)
 
-      get :other_index
+      get :index_without_authorization
     end
   end
 end
