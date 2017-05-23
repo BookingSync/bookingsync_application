@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.bookingsync.com/api/v3/oauth
+    uri: https://www.bookingsync.com/api/v3/auth
     body:
       encoding: US-ASCII
       string: ''
@@ -27,21 +27,21 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Updated-Since-Request-Synced-At:
-      - 2017-05-19 15:40:00 UTC
+      - 2017-05-23 12:12:22 UTC
       X-Ratelimit-Limit:
       - '1000'
       X-Ratelimit-Reset:
-      - '1495209600'
+      - '1495544400'
       X-Ratelimit-Remaining:
       - '999'
       Link:
-      - <https://www.bookingsync.com/api/v3/oauth?page=1>; rel="first"
+      - <https://www.bookingsync.com/api/v3/auth?page=1>; rel="first"
       X-Per-Page:
       - '100'
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Etag:
-      - W/"73fbd6405e504baa87192e76fe8bbc41"
+      - W/"7ae87eb27b98a903a7cd84e261596313"
       Cache-Control:
       - max-age=0, private, must-revalidate
       P3p:
@@ -49,19 +49,19 @@ http_interactions:
         OUR SAMi OTRo UNRo PUBi IND UNI STA"
       Set-Cookie:
       - ahoy_track=true; path=/
-      - ahoy_visit=95b19be3-0bbe-4d0b-96e3-f41d34ba419a; path=/; expires=Fri, 26 May
-        2017 15:40:00 -0000
-      - ahoy_visitor=f1744e4d-b1cc-4e89-a3bc-1b80c3abe12e; path=/; expires=Sun, 19
-        May 2019 15:40:00 -0000
+      - ahoy_visit=620978c3-d854-4109-b97e-c1b6b709ef5d; path=/; expires=Tue, 30 May
+        2017 12:12:22 -0000
+      - ahoy_visitor=9a8e0322-f9b0-4fc6-82e9-9efec456c8cc; path=/; expires=Thu, 23
+        May 2019 12:12:22 -0000
       X-Request-Id:
-      - '00817671-b073-482c-8a86-79d077d990ca'
+      - 596b1fb3-9f08-4e8c-9daf-42336a465749
       X-Runtime:
-      - '0.675880'
+      - '1.312201'
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"oauth":{"account_id":1,"scopes":["public","payments_read","clients_read","bookings_read","rentals_read","rates_read"]},"meta":{"Link":{"first":"https://www.bookingsync.com/api/v3/oauth?page=1"},"X-Total-Pages":null,"X-Total-Count":null,"X-Per-Page":"100"}}'
+      string: '{"auth":{"account_id":1,"scopes":["public","rentals_read","bookings_write_owned","clients_write","payments_write_owned"]},"meta":{"Link":{"first":"https://www.bookingsync.com/api/v3/auth?page=1"},"X-Total-Pages":null,"X-Total-Count":null,"X-Per-Page":"100"}}'
     http_version:
-  recorded_at: Fri, 19 May 2017 15:40:00 GMT
+  recorded_at: Tue, 23 May 2017 12:12:23 GMT
 recorded_with: VCR 3.0.3

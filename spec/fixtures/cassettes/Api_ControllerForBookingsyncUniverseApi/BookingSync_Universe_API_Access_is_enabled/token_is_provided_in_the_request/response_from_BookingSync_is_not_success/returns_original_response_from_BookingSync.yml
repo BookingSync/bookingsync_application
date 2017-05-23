@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.bookingsync.com/api/v3/oauth
+    uri: https://www.bookingsync.com/api/v3/auth
     body:
       encoding: US-ASCII
       string: ''
@@ -27,7 +27,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Updated-Since-Request-Synced-At:
-      - 2017-05-19 15:37:53 UTC
+      - 2017-05-23 12:12:27 UTC
       Cache-Control:
       - no-store
       Pragma:
@@ -42,19 +42,19 @@ http_interactions:
         OUR SAMi OTRo UNRo PUBi IND UNI STA"
       Set-Cookie:
       - ahoy_track=true; path=/
-      - ahoy_visit=a79e54a6-c5d8-4652-a249-32ed05db3580; path=/; expires=Fri, 26 May
-        2017 15:37:53 -0000
-      - ahoy_visitor=48ff484b-c851-453c-87ec-9971f7e64cd6; path=/; expires=Sun, 19
-        May 2019 15:37:53 -0000
+      - ahoy_visit=7f85393d-a4eb-4ffc-991a-5b29b8592f75; path=/; expires=Tue, 30 May
+        2017 12:12:27 -0000
+      - ahoy_visitor=efdcdd33-250b-4257-bb78-0cf1b25772de; path=/; expires=Thu, 23
+        May 2019 12:12:27 -0000
       X-Request-Id:
-      - d7a912c7-75e8-4a6f-b3fe-a1029e48831e
+      - ffe2bc54-d252-420c-b18f-a4188affdd42
       X-Runtime:
-      - '0.035739'
+      - '0.041128'
       Connection:
       - close
     body:
       encoding: UTF-8
       string: '{"errors":[{"code":"unauthorized"}]}'
     http_version:
-  recorded_at: Fri, 19 May 2017 15:37:53 GMT
+  recorded_at: Tue, 23 May 2017 12:12:27 GMT
 recorded_with: VCR 3.0.3

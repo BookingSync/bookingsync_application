@@ -6,7 +6,7 @@ module BookingsyncApplication
       def authenticate_account!
         if enable_for_bookingsync_universe_api? && auth = request.headers["Authorization"].presence
           response = Faraday.new(url: bookingsync_url).get do |req|
-            req.url oauth_path
+            req.url auth_path
             req.headers["Authorization"] = auth
           end
           if response.success?
@@ -25,8 +25,8 @@ module BookingsyncApplication
         "#{ENV['BOOKINGSYNC_URL']}"
       end
 
-      def oauth_path
-        "/api/v3/oauth"
+      def auth_path
+        "/api/v3/auth"
       end
 
       def enable_for_bookingsync_universe_api?
@@ -56,11 +56,11 @@ module BookingsyncApplication
         end
 
         def scopes
-          oauth.fetch("scopes").map(&:to_s)
+          auth.fetch("scopes").map(&:to_s)
         end
 
         def account_id
-          oauth.fetch("account_id")
+          auth.fetch("account_id")
         end
 
         def allows_access_for?(required_scopes)
@@ -69,8 +69,8 @@ module BookingsyncApplication
 
         private
 
-        def oauth
-          @oauth ||= response_hash.fetch("oauth")
+        def auth
+          @auth ||= response_hash.fetch("auth")
         end
       end
     end
