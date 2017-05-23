@@ -27,12 +27,6 @@ class Api::ControllerForBookingsyncUniverseApi < BookingsyncApplication::Api::Ba
   def index_without_authorization
     head 200
   end
-
-  private
-
-  def enable_for_bookingsync_universe_api?
-    true
-  end
 end
 
 RSpec.describe Api::ControllerForBookingsyncUniverseApi, type: :controller do
@@ -117,18 +111,6 @@ RSpec.describe Api::ControllerForBookingsyncUniverseApi, type: :controller do
 
         get :index_without_authorization
       end
-    end
-  end
-
-  context "BookingSync Universe API Access is not enabled" do
-    before do
-      allow(controller).to receive(:enable_for_bookingsync_universe_api?).and_return(false)
-    end
-
-    it "fallbacks to standard authentication" do
-      expect(SentinelForTestingAuthFallback).to receive(:call)
-
-      get :index_without_authorization
     end
   end
 end

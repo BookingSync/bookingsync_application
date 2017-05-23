@@ -2,6 +2,7 @@
 
 * bump bookingsync-engine to ~> 2.0.1
 * drop rails 4.1 support
+* Add support for BookingSync Universe API concept
 
 # 0.5.0
 

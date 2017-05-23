@@ -4,7 +4,7 @@ module BookingsyncApplication
       private
 
       def authenticate_account!
-        if enable_for_bookingsync_universe_api? && auth = request.headers["Authorization"].presence
+        if auth = request.headers["Authorization"].presence
           response = Faraday.new(url: bookingsync_url).get do |req|
             req.url auth_path
             req.headers["Authorization"] = auth
@@ -27,10 +27,6 @@ module BookingsyncApplication
 
       def auth_path
         "/api/v3/auth"
-      end
-
-      def enable_for_bookingsync_universe_api?
-        false
       end
 
       def scope
