@@ -28,7 +28,7 @@ describe Webhooks::BookingsyncController do
     before { @request.headers["X-Content-Signature"] = "e42951a4561cf14ffc97def80429542daba31ea6" }
 
     it "responses with unprocessable_entity status" do
-      post :everything, "foo"
+      post :everything, body: "foo"
       expect(response.status).to eq 422
     end
   end

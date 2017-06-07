@@ -3,7 +3,7 @@ ENV['RAILS_ENV'] ||= 'test'
 require 'spec_helper'
 require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 require 'rspec/rails'
-
+require 'vcr'
 require 'factory_girl_rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -25,6 +25,8 @@ require 'factory_girl_rails'
 # Checks for pending migrations before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
+
+Dotenv.load
 
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
@@ -51,4 +53,15 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 
   config.include FactoryGirl::Syntax::Methods
+
+  VCR.configure do |config|
+    config.cassette_library_dir = "spec/fixtures/cassettes"
+    config.hook_into :webmock
+    config.configure_rspec_metadata!
+    config.filter_sensitive_data('Bearer <OAUTH_TOKEN>') do |interaction|
+      if interaction.request.headers["Authorization"]
+        interaction.request.headers["Authorization"].first
+      end
+    end
+  end
 end

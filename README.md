@@ -76,9 +76,9 @@ We now want to provide secured controllers, this controllers will be accessible 
 
 You have 2 options pre built for this:
 
-1) Create base admin controller (it will be `json` based):
+1) Create base API controller (it will be `json` based):
 ```
-class Admin::BaseController < BookingsyncApplication::Admin::BaseController
+class Api::BaseController < BookingsyncApplication::Api::BaseController
 end
 ```
 
@@ -87,12 +87,45 @@ end
 class Admin::BaseHTMLController < ApplicationController
   respond_to :html
 
-  include BookingsyncApplication::Admin::CommonBaseController
+  include BookingsyncApplication::Controllers::CommonBase
 end
 ```
 
 
 _Note: When saving new token, this gem uses a separate thread with new db connection to ensure token save (in case of a rollback in the main transaction). To make room for the new connections, it is recommended to increase db `pool` size by 2-3._
+
+### BookingSync Universe API
+
+You can expose the application API by taking advantage of BookingSync Universe API concept. BookingSync Universe API is about making all the APIs accessible by the same token that is acquired in standard OAuth flow as outlined in the [docs](http://developers.bookingsync.com/reference/authorization/). The authentication is handled on BookingSync Core API, but the authorization is up to the application to handle.
+
+To enable BookingSync Universe API for the controller, include `BookingsyncApplication::Controllers::BookingsyncUniverseApiAccess` module:
+
+``` ruby
+class Api::ControllerForBookingsyncUniverseApi < BookingsyncApplication::Api::BaseController
+  include BookingsyncApplication::Controllers::BookingsyncUniverseApiAccess
+
+  def index
+    head 200
+  end
+end
+```
+
+If the request includes `Authorization` header (you can read more about the expected format in the [docs](http://developers.bookingsync.com/reference/)), it will be proxied to BookingSync Core API to check if the token is valid or not. If the token is not valid, `401` error will be returned with the corresponding error in the body. If it's valid, the account that is the owner of the token will be authenticated. By default there is no any extra authorization layer and as long as BookingSync Universe API is enabled all the endpoints will be accessible. To handle authorization you can use `bookingsync_universe_authorize_request!` method:
+
+``` ruby
+class Api::ControllerForBookingsyncUniverseApi < BookingsyncApplication::Api::BaseController
+  include BookingsyncApplication::Controllers::BookingsyncUniverseApiAccess
+
+  before_action -> { bookingsync_universe_authorize_request! :clients_read, :clients_write },
+    only: :index
+
+  def index
+    head 200
+  end
+end
+```
+
+`bookingsync_universe_authorize_request!` expects the list of [scopes](http://developers.bookingsync.com/reference/authorization/#scopes) that are required to access this endpoint. If at least one of them is present on the token, the request will be authorized. Otherwise `403` error will be returned with the corresponding error message in the body.
 
 ## Configuration
 

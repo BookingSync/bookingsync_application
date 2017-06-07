@@ -3,3 +3,6 @@ log/*.log
 pkg/
 spec/dummy/db/*.sqlite3
 spec/dummy/log/*.log
+.env
+Gemfile.lock
+gemfiles/*.lock
