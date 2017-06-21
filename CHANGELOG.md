@@ -1,5 +1,7 @@
 # master
 
+# [2.0.0] - 2017-06-21
+
 * Add support for Rails 5.1
 * Drop support for Rails prior to 5.0
 
