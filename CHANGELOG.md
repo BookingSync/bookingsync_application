@@ -1,5 +1,7 @@
 # master
 
+# 2.0.2 - 2018-11-04
+
 * Add support for Rails 5.2
 
 # 2.0.1 - 2017-11-30
