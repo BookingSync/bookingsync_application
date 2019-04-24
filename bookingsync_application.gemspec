@@ -16,15 +16,17 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
+  s.required_ruby_version = '>= 2.3.8'
+
   s.add_dependency 'rails', '>= 5.0', '< 5.3'
-  s.add_dependency 'bookingsync-engine', '~> 3.0.2'
+  s.add_dependency 'bookingsync-engine', '~> 4.0'
   s.add_dependency 'jsonapi-resources', '~> 0.1'
   s.add_dependency 'synced'
   s.add_dependency 'dotenv-rails'
 
   s.add_development_dependency 'appraisal'
   s.add_development_dependency 'rspec-rails'
-  s.add_development_dependency 'factory_girl_rails'
+  s.add_development_dependency 'factory_bot_rails'
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'vcr'
   s.add_development_dependency 'webmock'

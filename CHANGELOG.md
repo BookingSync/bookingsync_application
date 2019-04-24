@@ -1,5 +1,8 @@
 # master
 
+* BREAKING: bump bookingsync-engine to ~> 4.0.0
+* BREAKING: drop support for ruby prior to 2.3
+
 # 2.0.2 - 2018-11-04
 
 * Add support for Rails 5.2
