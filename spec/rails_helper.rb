@@ -4,7 +4,7 @@ require 'spec_helper'
 require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 require 'rspec/rails'
 require 'vcr'
-require 'factory_girl_rails'
+require 'factory_bot_rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -52,7 +52,7 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
 
   VCR.configure do |config|
     config.cassette_library_dir = "spec/fixtures/cassettes"

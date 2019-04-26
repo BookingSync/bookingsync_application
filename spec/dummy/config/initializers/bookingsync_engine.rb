@@ -1,1 +1,1 @@
-require 'bookingsync'
+require 'bookingsync-engine'

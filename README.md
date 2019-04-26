@@ -7,15 +7,13 @@ A Rails engine to simplify building BookingSync Applications.
 
 ## Requirements
 
-This engine requires Rails `>= 4.0.0` and Ruby `>= 2.0.0`.
+This engine requires Rails `>= 5.0` and Ruby `>= 2.3`.
 
 ## Documentation
 
 [API documentation is available at rdoc.info](http://www.rubydoc.info/gems/bookingsync_application).
 
 ## Installation
-
-BookingSync Application works with Rails 4.0 onwards and Ruby 2.0 onwards. To get started, add it to your Gemfile with:
 
 ```ruby
 gem 'bookingsync_application'
@@ -26,6 +24,11 @@ Then bundle install:
 ```ruby
 bundle install
 ```
+
+## Usage
+
+BookingSync Application relies heavily on [BookingSync-Engine](https://github.com/BookingSync/bookingsync-engine).
+Have a look at the project for more options.
 
 ### Add authorization routes
 
@@ -62,11 +65,11 @@ and migrate:
 rake db:migrate
 ```
 
-Also include `BookingSync::Engine::Account` in your `Account` model:
+Also include `BookingSync::Engine::Models::Account` in your `Account` model:
 
 ```ruby
 class Account < ActiveRecord::Base
-  include BookingSync::Engine::Model
+  include BookingSync::Engine::Models::Account
 end
 ```
 
