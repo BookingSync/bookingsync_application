@@ -1,5 +1,7 @@
 # master
 
+# 3.0.0 - 2019-04-26
+
 * BREAKING: bump bookingsync-engine to ~> 4.0.0
 * BREAKING: drop support for ruby prior to 2.3
 
