@@ -1,4 +1,4 @@
-require 'bookingsync'
+require 'bookingsync-engine'
 require 'synced'
 require 'dotenv-rails'
 require 'jsonapi-resources'
