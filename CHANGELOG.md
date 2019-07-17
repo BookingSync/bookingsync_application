@@ -1,5 +1,7 @@
 # master
 
+# 3.0.1 - 2019-07-17
+
 * Fix dependency requirements
 
 # 3.0.0 - 2019-04-26
