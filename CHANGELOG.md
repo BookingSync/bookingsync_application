@@ -1,5 +1,7 @@
 # master
 
+* Fix dependency requirements
+
 # 3.0.0 - 2019-04-26
 
 * BREAKING: bump bookingsync-engine to ~> 4.0.0
