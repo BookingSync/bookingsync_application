@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 2.3.8'
 
-  s.add_dependency 'rails', '>= 5.0', '< 5.3'
+  s.add_dependency 'rails', '>= 5.0'
   s.add_dependency 'bookingsync-engine', '~> 4.0'
   s.add_dependency 'jsonapi-resources', '~> 0.1'
   s.add_dependency 'synced'
@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'appraisal'
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'factory_bot_rails'
-  s.add_development_dependency 'sqlite3', '~> 1.3.6'
+  s.add_development_dependency 'sqlite3', '>= 1.3.6'
   s.add_development_dependency 'vcr'
   s.add_development_dependency 'webmock'
   s.add_development_dependency 'rubocop'
