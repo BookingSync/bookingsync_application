@@ -1,5 +1,6 @@
 # master
 
+* Add support for Rails 6.0
 * Fix dependency requirements
 
 # 3.0.0 - 2019-04-26
