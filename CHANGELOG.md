@@ -1,5 +1,8 @@
 # master
 
+* Drop support for Ruby prior to 2.5 (to satisfy Rails 6 requirements)
+* Relax bookingsync-engine requirements
+
 # 3.1.0 - 2019-09-19
 
 * Add support for Rails 6.0
