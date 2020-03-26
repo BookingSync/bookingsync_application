@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 2.3.8'
 
   s.add_dependency 'rails', '>= 5.0'
-  s.add_dependency 'bookingsync-engine', '~> 4.0'
+  s.add_dependency 'bookingsync-engine', '>= 4.0'
   s.add_dependency 'jsonapi-resources', '~> 0.1'
   s.add_dependency 'synced'
   s.add_dependency 'dotenv-rails'
