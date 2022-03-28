@@ -12,6 +12,7 @@ gemfile:
   - gemfiles/rails_5.1.gemfile
   - gemfiles/rails_5.2.gemfile
   - gemfiles/rails_6.0.gemfile
+  - gemfiles/rails_6.1.gemfile
 env:
   - BOOKINGSYNC_URL=https://www.bookingsync.com
 script: "bundle exec rake spec"

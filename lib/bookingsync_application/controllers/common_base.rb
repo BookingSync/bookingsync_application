@@ -4,6 +4,7 @@ module BookingsyncApplication
       def self.included(base)
         base.class_eval do
           force_ssl
+          # force_ssl if Rails.version <= "6.0"
 
           before_action :authenticate_account!
           after_action :allow_bookingsync_iframe

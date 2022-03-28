@@ -9,19 +9,30 @@ describe Api::BaseController do
 
   let(:account) { create :account }
 
-  before { @request.env['HTTPS'] = 'on' }
+  before { @request.env['HTTPS'] = 'on'  }
 
-  it 'redirects to engine authentication path' do
-    get :index
-    expect(response.body).to include '/auth/bookingsync/?account_id='
+  if Rails.version <= "6.0"
+    it 'redirects to engine authentication path' do
+      get :index
+
+      expect(response.body).to include '/auth/bookingsync/?account_id='
+    end
+  else
+    it 'redirects to engine authentication path' do
+      get :index, format: :html
+
+      expect(response.body).to include '/auth/bookingsync/?account_id='
+    end
   end
 
-  context 'when ssl not used' do
-    before { @request.env['HTTPS'] = nil }
+  if Rails.version <= "6.0"
+    context 'when ssl not used' do
+      before { @request.env['HTTPS'] = nil }
 
-    it 'forces ssl' do
-      get :index
-      expect(response).to redirect_to 'https://test.host/api/base'
+      it 'forces ssl' do
+        get :index
+        expect(response).to redirect_to 'https://test.host/api/base'
+      end
     end
   end
 
