@@ -11,18 +11,10 @@ describe Api::BaseController do
 
   before { @request.env['HTTPS'] = 'on'  }
 
-  if Rails.version <= "6.0"
-    it 'redirects to engine authentication path' do
-      get :index
+  it 'redirects to engine authentication path' do
+    get :index, format: :html
 
-      expect(response.body).to include '/auth/bookingsync/?account_id='
-    end
-  else
-    it 'redirects to engine authentication path' do
-      get :index, format: :html
-
-      expect(response.body).to include '/auth/bookingsync/?account_id='
-    end
+    expect(response.body).to include '/auth/bookingsync'
   end
 
   if Rails.version <= "6.0"
