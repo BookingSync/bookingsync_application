@@ -17,12 +17,14 @@ describe Api::BaseController do
     expect(response.body).to include '/auth/bookingsync'
   end
 
-  context 'when ssl not used' do
-    before { @request.env['HTTPS'] = nil }
+  if Rails.version < "6.1"
+    context 'when ssl not used' do
+      before { @request.env['HTTPS'] = nil }
 
-    it 'forces ssl' do
-      get :index
-      expect(response).to redirect_to 'https://test.host/api/base'
+      it 'forces ssl' do
+        get :index
+        expect(response).to redirect_to 'https://test.host/api/base'
+      end
     end
   end
 
