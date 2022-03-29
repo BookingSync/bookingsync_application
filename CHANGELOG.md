@@ -1,5 +1,7 @@
 # master
 
+# 4.1.0 - 2022-03-29
+
 * Fix specs after dependencies' update
 * Add config for Ruby workflow for Github Actions
 * Drop `force_ssl` from BookingsyncApplication::Controllers::CommonBase for Rails version from 6.1 onwards
