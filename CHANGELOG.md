@@ -1,5 +1,8 @@
 # master
 
+* Fix specs after dependencies' update
+* Add config for Ruby workflow for Github Actions
+
 # 4.0.0 - 2020-04-01
 
 * Drop support for Ruby prior to 2.5 (to satisfy Rails 6 requirements)

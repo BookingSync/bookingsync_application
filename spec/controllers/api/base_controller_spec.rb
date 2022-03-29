@@ -12,8 +12,9 @@ describe Api::BaseController do
   before { @request.env['HTTPS'] = 'on' }
 
   it 'redirects to engine authentication path' do
-    get :index
-    expect(response.body).to include '/auth/bookingsync/?account_id='
+    get :index, format: :html
+
+    expect(response.body).to include '/auth/bookingsync'
   end
 
   context 'when ssl not used' do
