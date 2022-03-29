@@ -35,3 +35,5 @@ jobs:
         run:  bundle exec appraisal install
       - name: Run tests
         run: bundle exec appraisal rspec
+        env:
+          BOOKINGSYNC_URL: "https://www.bookingsync.com"
