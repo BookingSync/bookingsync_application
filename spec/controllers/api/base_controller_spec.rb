@@ -9,7 +9,7 @@ describe Api::BaseController do
 
   let(:account) { create :account }
 
-  before { @request.env['HTTPS'] = 'on'  }
+  before { @request.env['HTTPS'] = 'on' }
 
   it 'redirects to engine authentication path' do
     get :index, format: :html
