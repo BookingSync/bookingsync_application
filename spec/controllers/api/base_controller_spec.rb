@@ -17,7 +17,7 @@ describe Api::BaseController do
     expect(response.body).to include '/auth/bookingsync'
   end
 
-  if Rails.version <= "6.0"
+  if Rails.version < "6.1"
     context 'when ssl not used' do
       before { @request.env['HTTPS'] = nil }
 
