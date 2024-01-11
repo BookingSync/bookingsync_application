@@ -13,6 +13,8 @@ module BookingsyncApplication
             @scope = AuthorizationScope.from_response(response)
 
             session[:account_id] = scope.account_id
+            session[:accounts_user_id] = scope.accounts_user_id
+            session[:user_id] = scope.user_id
           else
             render json: response.body, status: response.status and return
           end
@@ -57,6 +59,14 @@ module BookingsyncApplication
 
         def account_id
           auth.fetch("account_id")
+        end
+
+        def accounts_user_id
+          auth.fetch("accounts_user_id")
+        end
+
+        def user_id
+          auth.fetch("user_id")
         end
 
         def allows_access_for?(required_scopes)
