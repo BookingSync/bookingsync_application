@@ -7,7 +7,10 @@ A Rails engine to simplify building BookingSync Applications.
 
 ## Requirements
 
-This engine requires Rails `>= 5.0` and Ruby `>= 2.3`.
+For version <= 4.1
+Rails `>= 5.0` and Ruby `>= 2.3`
+For version >= 4.2
+Rails `>= 6.0` and Ruby `>= 3.0`
 
 ## Documentation
 
