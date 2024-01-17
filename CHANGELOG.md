@@ -1,5 +1,9 @@
 # master
 
+# 4.2.0 - 2024-01-17
+
+* Set `accounts_user_id` and `user_id` for Universe API
+
 # 4.1.0 - 2022-03-29
 
 * Fix specs after dependencies' update
