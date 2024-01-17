@@ -61,7 +61,7 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"auth":{"account_id":1,"scopes":["public","rentals_read","bookings_write_owned","payments_write_owned"]},"meta":{"Link":{"first":"https://www.bookingsync.com/api/v3/auth?page=1"},"X-Total-Pages":null,"X-Total-Count":null,"X-Per-Page":"100"}}'
+      string: '{"auth":{"account_id":1,"accounts_user_id":2,"scopes":["public","rentals_read","bookings_write_owned","payments_write_owned"],"user_id":3},"meta":{"Link":{"first":"https://www.bookingsync.com/api/v3/auth?page=1"},"X-Total-Pages":null,"X-Total-Count":null,"X-Per-Page":"100"}}'
     http_version:
   recorded_at: Tue, 23 May 2017 12:12:23 GMT
 recorded_with: VCR 3.0.3
